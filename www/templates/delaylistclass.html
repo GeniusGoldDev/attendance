@@ -1,0 +1,61 @@
+<div ng-controller="classes">
+    <div class="header header-black">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="settings"  ng-show="admin" ng-click="editMode()" ng-class="{'title' : edit}">
+                    <img ng-show="!edit" src="images/icon-settings2.png"  alt="" />
+                    <h2 ng-show="edit">{{editText}}</h2>
+                </td>
+                <td class="settings"  ng-hide="admin">&nbsp;</td>
+
+                <td  class="title" align="center"><h2>قائمة التأخير</h2></td>
+                <td align="right" class="settings" >
+                   <a ng-click="showNav()"> <img  src="images/icon-menu.png"  alt="" /></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="body classes bgred" >
+        <div ng-repeat="value in desplayData">
+            {{key}}
+
+            <div class="class-thumb"
+                 ng-click="loadCalenderdelay(value.row1.cid, value.row1.desc,value.row1.name)"
+                 ng-class="{'select':clicked ,'edit-class':edit}">
+
+                <!--<span class="class">{{lang.class_id}}</span>-->
+                <span class="no">{{value.row1.name}}</span>
+                <span class="month">{{value.row1.desc}}</span>
+            </div>
+
+            <div class="class-thumb" ng-if ="value.row2"
+                 ng-click="loadCalenderdelay(value.row2.cid, value.row2.desc,value.row2.name)"
+                 ng-class="{'select':clicked ,'edit-class':edit}">
+
+               <!-- <span class="class">{{lang.class_id}}</span>-->
+                <span class="no">{{value.row2.name}}</span>
+                <span class="month">{{value.row2.desc}}</span>
+            </div>
+
+            <div class="class-thumb" ng-if ="value.row3"
+                 ng-click="loadCalenderdelay(value.row3.cid, value.row3.desc,value.row3.name)"
+                 ng-class="{'select':clicked ,'edit-class':edit}">
+               <!-- <span class="class">{{lang.class_id}}</span>-->
+                <span class="no">{{value.row3.name}}</span>
+                <span class="month">{{value.row3.desc}}</span>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+
+   <!-- <div class="footer">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center">
+                    <a class="btn-edit" ng-show="admin" ng-class="{'btn-cancel' : edit}" ng-click="editMode()">
+                        <img ng-show="!edit" src="images/ico-edit.png"  alt="">{{editText}}</a>
+                </td>
+            </tr>
+        </table>
+    </div>-->
+</div>

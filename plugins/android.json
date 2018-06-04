@@ -1,0 +1,46 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.paypal.cordova.mobilesdk": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    },
+    "com.phonegap.plugins.PushPlugin": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    },
+    "it.mobimentum.phonegapspinnerplugin": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    },
+    "jp.wizcorp.phonegap.plugin.wizSpinnerPlugin": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    }
+  },
+  "dependent_plugins": {
+    "card.io.cordova.mobilesdk": {
+      "PACKAGE_NAME": "com.webapp.attendance"
+    }
+  }
+}

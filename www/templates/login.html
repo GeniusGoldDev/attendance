@@ -1,0 +1,72 @@
+<div class="login">
+    <div class="header">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="settings" >
+                   <!--<a href="#/newplan"> <img  src="images/icon-adduser.png"  alt="" /></a>-->
+                </td>
+
+                <td class="title" align="center"><h2>{{title}}</h2></td>
+                
+                <td align="right" class="settings" >
+                   <!--<a href="#/indexpage"> <img  src="images/icon-news.png"  alt="" /></a>-->
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+    <div class="logo">
+        <div class="custom-add custom-add-left">
+            <img ng-src="{{ads.left.medias[0].url}}" />
+        </div>
+        <div class="custom-add custom-add-right">
+            <img ng-src="{{ads.right.medias[0].url}}" />
+        </div>
+        <!-- <img class="app-logo" ng-src="images/logo.png" alt=""> -->
+        <img class="app-logo" ng-src="{{schoollogo}}" alt="">
+    </div>
+    <div class="container login-fld">
+        <div class="flds">
+                <!-- ng-init="getschools()" -->
+            <div class="row selectIcon" dir="rtl" >
+                <select class="selectStyle" ng-model="schname"  ng-options="city as city.school_name for city in schoollist track by city.id">
+                    <option value="">-- Select school --</option>
+                  <!-- <option ng-repeat="s in schoollist"  value="{{s.id}}">{{s.school_name}}</option> -->
+                  <!-- <option value="">School 2</option>
+                  <option value="">School 3</option>
+                  <option value="">School 4</option> -->
+                </select>
+            </div>
+            <div class="row">
+                <input type="text" name="textfield" id="textfield" ng-model="email_id" placeholder="{{lang.user_name}}" value="{{email_id}}">
+            </div>
+            <div class="row">
+                <input type="password" name="textfield" id="textfield" ng-model="password" placeholder="{{lang.password}}" value="{{password}}">
+            </div>
+        </div>
+        <div class="containerLogin">
+        <div class="remember dviLogin01">{{lang.remme}}
+            <div class="cus-check">
+                <input type="checkbox" class="cus-check-checkbox" id="remme" value="1">
+                <label for="remme" class="cus-check-label">
+                    <div class="cus-check-inner"></div>
+                </label>
+            </div>
+        </div>
+        <!--<div class="forget-pass dviLogin02" id="popUpBtn" ng-click="resetPass()">{{lang.forgetpass}}</div>
+        </div>-->
+        <button class="btn-login" ng-click="login()">{{lang.login}}</button>
+
+       </div> 
+
+    </div>
+    <br>
+    <div class="add-slider" ng-if="ads.bottom.medias.length>0">
+        <div class="blueberry">
+            <ul class="slides">
+                <li ng-if="ads.bottom.medias.length>1" ng-repeat="slide in ads.bottom.medias"><img ng-src="{{slide.url}}"></li>
+            </ul>
+        </div>
+    </div>
+
+</div>

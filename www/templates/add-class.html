@@ -1,0 +1,33 @@
+<div>
+    <form class="flds" ng-model="classRegForm">
+    <div class="header">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+               <td  class="title"><h2>Add new class</h2></td>
+               <td align="right" class="settings" ng-logout=""><img src="images/ico-logout.png"  alt="" /></td>
+            </tr>
+        </table>
+    </div>
+    <div class="body container" >
+        <form class="flds" id="class-reg">
+            <div class="row">
+                <input type="text" name="course[name]" id="name" ng-model="course.name" placeholder="Course Name" value="{{name}}">
+            </div>
+            <div class="row">
+                <textarea name="course[description]" id="description" ng-model="course.desc" placeholder="Description" >{{desc}}</textarea>
+            </div>
+            <div class="row">
+                <input type="number" name="course[semno]" id="semno" ng-model="course.semno" placeholder="No of SEM" value="{{semno}}">
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="center" ><a ng-back="" ><img src="images/arrow-back.png"  alt=""></a></td>
+              <td><a class="btn-cancel" ng-click="registerClass()"><img src="images/ico-tick.png"  alt="">Save</a></td>
+              <td align="center" ><a ng-home="" ><img src="images/arrow-home.png"  alt=""></a></td>
+            </tr>
+        </table>
+    </div>
+</div>

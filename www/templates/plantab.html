@@ -1,0 +1,36 @@
+ <div>
+     <div class="header1" ng-init="getnews()">
+      <span class="leftside"> <a href="#/login">Subscribe</a></span>
+      <span class="rightside" ng-click="login()">Login</span>
+     </div>
+     <div class="midsection"  >
+       <div>
+         <br>Welcome !<br><br>Here is your subscription plan. You can choose one of these.<br><br>
+       </div>
+      <div ng-repeat="i in news" >
+      <input type="radio" name="gender"  value="{{i.amount}}" ng-model="rad[$index]" ng-click="selectplan(i.id)" checked> {{i.name}}<br>
+      <br>
+      </div>
+      <div>
+        <input type="submit" ng-click="register()" value="Proceed" />
+
+      </div>
+      
+  </div>
+  
+<div class = "tabs">
+     
+  <a href="#/welcome" class = "tab-item">
+     <i class="fa fa-newspaper-o" aria-hidden="true"></i> News
+   </a>
+	
+   <a href="#/news" class = "tab-item">
+      <i class="fa fa-book" aria-hidden="true"></i>About Us
+   </a>
+
+   <a href="#/plan" class = "tab-item current">
+      <i class="fa fa-paper-plane" aria-hidden="true"></i>Plan
+   </a>
+</div>
+</div> 
+

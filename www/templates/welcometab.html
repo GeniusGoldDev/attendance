@@ -1,0 +1,29 @@
+ <div>
+     <div class="header1" ng-init="getnews()">
+    <span class="leftside"> <a href="#/login">News</a></span>
+    <span class="rightside" ng-click="login()">Login</span>
+
+     </div>
+     <div class="container-section">
+<div class="midsection" ng-repeat="i in news">
+   <h2> {{i.title}}</h2>
+    <p>
+    {{i.content}}
+    </p>
+</div>
+</div>
+<div class = "tabs">
+     
+  <a href="#/welcome" class = "tab-item current">
+     <i class="fa fa-newspaper-o" aria-hidden="true"></i> News
+   </a>
+	
+   <a href="#/news" class = "tab-item">
+      <i class="fa fa-book" aria-hidden="true"></i>About Us
+   </a>
+
+   <a href="#/plan" class = "tab-item">
+      <i class="fa fa-paper-plane" aria-hidden="true"></i>Plan
+   </a>
+</div>
+</div> 

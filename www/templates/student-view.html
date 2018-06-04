@@ -1,0 +1,113 @@
+<div class="" ng-controller="studentView">
+    <div class="header">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="settings">
+                    <a ng-back=""><img src="images/arrow-back2.png" alt="" /></a>
+                </td>
+                <td class="title" align="center">
+                    <h2>{{lang.student_info}}</h2>
+                    <!--<a href="#/user" class="ico-user"><img src="images/ico-user.png"  alt="" /></a>-->
+                </td>
+                <!--<td align="right" class="settings">
+                    <img ng-logout="" src="images/ico-logout.png"  alt="" />
+                </td>-->
+                <td align="right" class="settings">
+                    <a ng-click="showNav()" ng-show="!strParents"> <img src="images/icon-menu.png" alt="" /></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="body user">
+        <div class="userpic-container"> <a ng-click="delete(student.sid)" ng-show="canDelete" class="btn-delete">{{lang.delete}}</a>
+            <div class="photo"><img ng-src="{{student.pic}}" alt=""></div>
+            <h4 class="name">{{student.name}}</h4>
+            <div class="info">
+                <div class="col"><span>{{student.absent_count}}</span>
+                    <label> : {{lang.absesnce}}</label>
+                </div>
+                <div class="col"><span>{{lang.class_plc}}</span>
+                    <label> : {{course.name}}</label>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="desc-title">
+                
+            
+            <div class="{{tap1st}}" ><span ng-click="tap2()">الملاحظات</span></div>
+            <div class="{{tap2st}} col" ><span  ng-click="tap1()">تفاصيل الغياب</span></div>
+            
+            </div>
+            <!-- {{lang.desc}} -->
+            <!--<span ng-hide="edit">{{student.name}}</span>
+                <span ng-show="edit"><input type="text" name="textfield" id="textfield" value="{{student.name}}" ng-model="student.name" class="txtfld" /></span>
+                <label>{{lang.name}}</label>
+
+            </div>
+            <div class="row"><span>{{course.name}}</span><label>{{lang.class_plc}}</label></div>
+            <div class="row"><span>{{student.absent_count}}</span><label>{{lang.absesnce}}</label></div>-->
+            <div class="row" ng-show="tap1show">
+                <div class="abs-details" ng-show="student.absents.length > 0" ng-repeat="attend in student.absents track by $index">
+                    <div class="date">{{attend.date}}</div>
+                    <div class="reason">{{attend.sem}}</div>
+                    <a class="btn-add-note" ng-hide="teacher || strParents" ng-click="saveNote(attend.date, attend.notes, $index)">{{lang.add_text}}</a>
+                    <input type="text" ng-hide="teacher || strParents " placeholder="{{lang.give_note}}" ng-model="notetext[$index]" class="note-field" />
+                    <div class="note" ng-show="!strParents" ng-repeat="note in attend.notes track by $index| filter:reverse">{{note.note}}
+                        <i class="del" ng-show="admin || mod" ng-click="deleteNote(note.ID, attend.notes, $index)"></i>
+                        <div class="clr"></div>
+                    </div>
+                </div>
+                <div class="abs-details" ng-show="student.absents.length == undefined ">
+                    حدث خطأ في عرض غياب الطالب
+                </div>
+                <div class="abs-details" ng-show="student.absents.length <= 0 ">
+                    لا يوجد غياب للطالب حتى الآن
+                </div>
+            </div>
+
+            <div class="row" ng-hide="tap1show">
+                    <div class="abs-details">
+                            <!-- ng-show="student.absents.length > 0 && $index == 0" ng-repeat="attend in student.absents track by $index" -->
+                        <!-- <div class="date">T2{{attend.date}}</div>
+                        <div class="reason">{{attend.sem}}</div> -->
+                        <!-- ng-show="$index == 0" -->
+                        <div >
+                        <!--<a class="btn-add-note" ng-hide="teacher || strParents" ng-click="saveNotenew(noteclient, $index)">{{lang.add_text}}</a>
+                         <input type="text" maxlength="40" ng-hide="teacher || strParents " placeholder="{{lang.give_note}}" ng-model="notetext[$index]" class="note-field" /> -->
+                         <a class="btn-add-note" ng-hide="strParents" ng-click="saveNotenew(noteclient, $index)">{{lang.add_text}}</a>
+                        <input type="text" maxlength="40" ng-hide="strParents " placeholder="{{lang.give_note}}" ng-model="notetext[$index]" class="note-field" />
+                        <div class="note" ng-show="!strParents" ng-repeat="note in notes.items track by $index| filter:reverse">
+                            
+                            {{note.note}}
+                            <i class="del" ng-show="admin || mod" ng-click="deleteNotenew(note.ID, note.note, $index)"></i>
+                            <br>
+                            <br>
+                            <span style="color:black;font-size: x-small;">بواسطة: {{note.user}} &nbsp; &nbsp; &nbsp; بتاريخ: {{note.notedate | date:'dd-MM-yyyy'}}</span>
+                            <!--<span style="color:black;">{{note.notedate | date:'yyyy-MM-dd'}}</span> &nbsp; &nbsp; {{note.note}}-->
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="abs-details" ng-show="student.absents.length == undefined ">
+                        حدث خطأ في عرض ملاحظات الطالب
+                    </div>
+                    <div class="abs-details" ng-show="student.absents.length <= 0 ">
+                        لا توجد ملاحظات مضافة للطالب حتى الآن
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!--<div class="footer">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center" ><a ng-back="" ><img src="images/arrow-back.png"  alt=""></a></td>
+                <td align="center">
+
+                    <a class="btn-cancel" ng-show="edit" ng-click="cencel()">{{lang.cancel}}</a>
+                    <a class="btn-edit" ng-click="enbEdit()" ng-show="admin"><img ng-show="!edit" src="images/ico-edit.png"  alt="">{{editButtontext}}</a> 
+                </td>
+                <td align="center" ><a ng-home="" ng-hide="user_parent" ><img src="images/arrow-home.png"  alt=""></a></td>
+            </tr>
+        </table>
+    </div>-->

@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+
+
+/* CSS Document */
+
+
+
+
+
+
+
+/* Mobile Portrait Size to Mobile Size (devices and browsers) */
+
+
+
+@media only screen and (max-width:350px) {
+
+
+
+
+
+
+
+body{font-size:14px;}
+
+
+
+
+
+.header{min-height: 38px;}
+
+.header td{padding:7px;}
+
+
+
+.header td:first-child{width:20%;}
+
+
+
+.header td:last-child{width:20%;}
+
+
+.header td.settings img{width:22px;}
+.header td.filter img{width:30px;}
+
+
+.header td.taxi img{width:30px;}
+
+
+
+.header td.title img{height:18px;}
+
+
+
+.header td .lang{ right:40px; top:5px; font-size:14px; height:28px; width:28px; line-height:28px; }
+
+
+
+.header td.title h2{font-size:16px;}
+
+
+
+
+
+
+
+.body{top:38px; bottom:38px;}
+
+
+
+
+
+
+
+
+
+
+.footer td{padding:4px; height: 30px;}
+
+
+
+.footer .btn-picknow{ font-size:16px; border-radius:1px; padding:8px 18px; margin-right:10px;}
+
+
+
+.footer .btn-picknow img{display:none;}
+
+
+
+.footer .btn-pickltr{ font-size:16px; border-radius:1px; padding:8px 18px;}
+
+
+
+.footer .btn-pickltr img{display:none;}
+
+
+
+.footer td img{width:25px; margin:2px 0;}
+
+
+
+.footer .btn-end-request{font-size:20px; border-radius:3px; padding:3px 12px;}
+
+
+
+.footer .btn-end-request img{width:8px; vertical-align:2px; margin:0 0 0 10px;}
+
+
+
+.classes .class-thumb{  height:120px;  }
+.classes .class-thumb .class{ padding:4px; margin-bottom:2px;}
+.classes .class-thumb .no {height: 60px;border-radius: 50px;font-size: 11px;line-height: 55px;}
+.classes .class-thumb .no {background-size: 55px;}
+.classes .class-thumb .month {padding:5px; font-size:18px;}
+
+
+.fc-header-title h2{font-size:17px;}
+
+.fc-header-center{display:none;}
+.callender{padding:8px;}
+.fc-border-separate tbody tr.fc-first td, .fc-border-separate td {    height: 50px;}
+    .fc-grid .fc-state-highlight .fc-day-number {height:50px;line-height: 50px;}
+
+
+.header .btn-edit {font-size:16px;	border-radius:2px;	padding:4px 6px;	right:19%; top:17%;}
+.header .btn-edit img {	width:15px;	vertical-align:-1px;	margin:0 10px 0 0;}
+.header .btn-cancel{font-size:16px;	border-radius:2px;	padding:4px 6px;	right:10%; top:17%; }
+.header .btn-cancel img {width:15px;	vertical-align:-1px;	margin:0 10px 0 0;}
+
+
+/*User Profile*/
+.alluser-profile{ top:40px; bottom:38px; }
+.alluser-profile .profile-info{ padding:10px; }
+.alluser-profile .profile-info .photo{width:100px; height:100px;  margin-right:18px;}
+
+.header .ico-user{ right:12%; top:8px;}
+.body.footer-space{
+    bottom: 35px;
+}
+.compose .fld label{
+    width: 90px;
+}
+
+    /*user popup*/
+   /* .right-menu{ border:1px solid yellow;}*/
+
+    .right-menu .user-name-bg{padding:12px; font-size:25px;}
+    .right-menu .user-logo img{width:85px;}
+    .right-menu .links a{ padding:10px; font-size:20px;}
+    .right-menu .links a:hover{background:#fda61b; color:#fff;}
+    .right-menu .links a img{width:32px; vertical-align:-12px; margin:0 10px 0 30px;}
+    .sign-out{ padding: 6px;  font-size: 18px;}
+    .sign-out img{width:28px; vertical-align:-6px; margin:0 8px;}
+
+
+
+    .body.callender .custom-bar{height: 38px; ; margin: 1px -8px;}
+
+    .note-field {width: 67%;}
+
+
+}

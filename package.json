@@ -1,0 +1,41 @@
+{
+  "name": "myapp",
+  "version": "1.1.1",
+  "description": "myApp: An Ionic project",
+  "dependencies": {
+    "card.io.cordova.mobilesdk": "^2.1.0",
+    "com.paypal.cordova.mobilesdk": "^3.5.0",
+    "cordova": "^8.0.0",
+    "cordova-android": "6.4.0",
+    "cordova-ios": "3.9.2",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "gulp": "^3.5.6",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.0.4",
+    "ionic-modal-nav": "^1.2.0",
+    "ionic-service-core": "^0.1.10",
+    "ionic-service-push": "^0.1.13",
+    "ng-cordova": "^0.1.27-alpha",
+    "phonegap-plugin-push": "^2.2.3"
+  },
+  "devDependencies": {
+    "@ionic/cli-plugin-cordova": "1.4.0",
+    "@ionic/cli-plugin-ionic1": "2.0.0",
+    "bower": "^1.8.2",
+    "gulp-util": "^2.2.14",
+    "shelljs": "^0.3.0"
+  },
+  "cordovaPlugins": [],
+  "cordovaPlatforms": [],
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "com.paypal.cordova.mobilesdk": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

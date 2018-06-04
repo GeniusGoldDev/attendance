@@ -1,0 +1,90 @@
+<div class="">
+    <div class="header header-orange">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="settings"><a ng-back="" ><img src="images/arrow-back2.png"  alt="" /></a></td>
+                <td class="title" align="center">
+                    <h2>{{date}}</h2>
+                </td>
+                <td align="right" class="settings">
+                   <a ng-click="showNav()"> <img  src="images/icon-menu.png"  alt="" /></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="body attendance {{editClass}}">
+        <div class="heading">
+            <div class="l">
+               
+                <table  style="width:100%;">
+                    <tr>
+                        <td style="text-align:left;">{{clsnm}}</td>
+                        <td  style="text-align:center;"><span ng-show="teacher && timeleft>0"> الوقت المتبقي : {{timeleft}}ث</span></td>
+                        <td  style="text-align:right;">{{lang.names}}</td>
+                    </tr>
+                </table>
+                <!-- <div style="float:left;width:33%;text-align:left;">{{clsnm}}</div>
+                <div style="float:left;width:34%;text-align:left;"><span ng-show="teacher"> Time Left : {{timeleft}}s</span>
+                    
+                </div>
+                 <div style="float:left;width:33%;text-align:right;">{{lang.names}}</div> -->
+                 
+                
+            </div>
+            <div id = "{{$index + 1}}" class="no" ng-repeat="num in getSemarray(noSem) track by $index" ng-value="sectionIndex = $index +1+''"
+                 ng-class="{'at-done':semteacher['sem-' + ($index + 1)]}"
+                 ng-click="showTeacherName(semteacher['sem-' + ($index + 1)], $index)">
+                <span class="img img-edited"
+                      ng-show="semteacher['sem-' + ($index + 1)].teacher != null && semteacher['sem-' + ($index + 1)].updated_by != '0'">
+                      <img src="images/attendance-edited.png" alt="" />
+                </span>
+                {{sectionIndex}} 
+                <!-- <span class="img img-saved" ng-show="savedData.indexOf(sectionIndex) > -1 && semteacher['sem-' + ($index + 1)].teacher != null"> -->
+                <span class="img img-saved" ng-show="semteacher['sem-' + ($index + 1)].teacher != null && semteacher['sem-' + ($index + 1)].updated_by == '0'">
+                    <img src="images/attendance-submited.png" alt="" />
+                </span>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <form role="form" ng-submit="sublitAttendance(sheet)">
+            <div class="row" ng-repeat="student in students">
+                <div class="l student-name" ng-value="myVar=$index + 1" style="direction:rtl;" ng-click="viewStudent(student.sid)"><span>{{$index + 1}}.</span> {{student.name}}</div>
+                <!-- ng-hide="edit"style="float:right; width: 12%;" -->
+                <div   id="{{myVar}}{{$index}}" style="float:right; width: 12%;" class="chk" ng-repeat="num in getSemarray(noSem) track by $index"
+                ng-class="{'present':student.sheet['cem-' + ($index + 1)]=== '1','absent':student.sheet['cem-' + ($index + 1)] === '0','delayabsent': student.sheet['cem-' + ($index + 1)] === '3','':student.sheet['cem-' + ($index + 1)] === 'undefined'}">
+                <span style="margin-left: 9px;" ng-click="giveAttendance(student.sid, $index, $event)">
+                        <!--<input type="checkbox" name="sheet[{{$index}}][{{student.sid}}]" value="0">-->
+                    </span></div>
+
+                    <!-- <div ng-show="edit"   id="{{myVar}}{{$index}}" class="chk" ng-repeat="num in getSemarray(noSem) track by $index"
+                    ng-class="{'present':student.sheet['cem-' + ($index + 1)]=== '1','absent':student.sheet['cem-' + ($index + 1)] === '0','delayabsent': student.sheet['cem-' + ($index + 1)] === '3','':student.sheet['cem-' + ($index + 1)] === 'undefined'}">
+                    
+                    <span ng-show="student.sheet['cem-' + ($index + 1)]=== '1' || student.sheet['cem-' + ($index + 1)]=== '0' || student.sheet['cem-' + ($index + 1)]=== '3' || student.sheet['cem-' + ($index + 1)]=== true || student.sheet['cem-' + ($index + 1)]=== false"
+                        ng-click="giveAttendanceEditMode(student.sid, $index, $event)">
+                           
+                            
+                        </span>
+                        <span ng-hide="student.sheet['cem-' + ($index + 1)]=== '1' || student.sheet['cem-' + ($index + 1)]=== '0' || student.sheet['cem-' + ($index + 1)]=== '3' || student.sheet['cem-' + ($index + 1)]=== true || student.sheet['cem-' + ($index + 1)]=== false" ng-click="warnToAttendance()">
+                            
+                        </span>
+                        
+                    </div> -->
+                <div class="clr"></div>
+            </div>
+            <div class="row" ng-show="students.length == 0"><p style="text-align: center;padding: 10px 0;">{{lang.no_result}}</p></div>
+        </form>
+    </div>
+    
+    
+    <div class="footer">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="btn-attendance">
+            <tr>
+                <!-- <td  ng-show="admin || editpower || mod"> -->
+                <td  ng-show="editpower">
+                    <a ng-click="editMode()">{{editText}} <img  ng-show="!edit" src="images/ico-edit-doc.png" alt="" /></a>
+                </td>
+                <td><a ng-click="sublitAttendance()">{{lang.submit}} <img src="images/ico-attendance.png" alt="" /></a></td>
+            </tr>
+        </table>
+    </div>
+</div>

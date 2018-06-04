@@ -1,0 +1,70 @@
+<div class="header">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+           <!-- <td class="title">
+                <h2><img src="images/ico-user.png"  alt=""> {{lang.mail_list}} </h2>
+            </td>
+            <td align="right" class="settings">
+                <a href="#/mailCompose" ng-show="user.user_type == 3 || user.user_type == 1">
+                    <img src="images/ico-compose.png" class="mail-image" alt="">
+                </a>
+                <img ng-logout="" src="images/ico-logout.png"  alt="" />
+            </td>-->
+
+            <td class="settings">
+                                <a ng-back="" ng-show="user_parent"><img src="images/arrow-back2.png" alt="" /></a>
+
+                <a href="#/mailCompose" ng-show=" user.user_type == 1">
+                <img src="images/ico-compose.png" class="mail-image" alt="">
+            </a></td>
+            <td  class="title" align="center"><h2>{{lang.mail_list}}</h2></td>
+            <td align="right" class="settings">
+
+                <a ng-click="showNav()" ng-hide="user_parent"> <img  src="images/icon-menu.png"  alt="" /></a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="body inbox">
+
+    <div ng-repeat="note in notifications" class="row-mail" ng-class="{
+        'admin' : note.user_type == 1 ,
+        'teacher' : note.user_type == 2,
+        'moderator' : note.user_type == 3,
+        '' : note.user_type == 4
+    }" 
+         ng-click="showOnClick = !showOnClick"
+         >
+
+        <div class="info">
+            <strong>{{note.first_name}}</strong>
+            <span ng-show="!showOnClick" >{{note.title}}</span>
+            <div class="notify-details" ng-show="showOnClick">
+                {{note.notification}}
+            </div>
+            <div class="date">{{note.date}}</div>
+        </div>
+        <div class="photo">
+            <!--<span ng-show="note.user_type != 4">{{note.user_right}}</span>-->
+            <!--<img ng-show="note.user_type == 4" src="{{note.pic}}" alt="">-->
+            <img  src="img/sid2.png"  alt="" />
+        </div>
+        <div class="delete-mail" ng-click="deleteMessage(note.ID, $event, $index)">
+            
+        </div>
+    </div>
+    <div ng-show="notifications.length <= 0" class="row-mail admin">
+        <p>{{lang.no_mail}}</p>
+    </div>
+</div>
+<!--<div class="footer">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center" ><a ng-back="" ><img src="images/arrow-back.png"  alt=""></a></td>
+            <td align="center">
+
+            </td>
+            <td align="center" ><a ng-home="" ng-hide="user_parent"><img src="images/arrow-home.png"  alt=""></a></td>
+        </tr>
+    </table>
+</div>-->

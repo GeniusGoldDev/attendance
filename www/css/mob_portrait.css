@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+
+
+/* CSS Document */
+
+
+
+
+
+
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
+
+
+@media only screen and (max-width: 479px) {
+
+
+
+
+
+
+
+body{font-size:15px;}
+
+
+
+
+
+
+.header{min-height: 43px;}
+.header td{padding:8px;}
+
+
+
+.header td:first-child{width:19%;}
+
+
+
+.header td:last-child{width:19%;}
+
+
+.header td.settings img{width:20px;}
+.header td.filter img{width:33px;}
+
+
+.header td.taxi img{width:33px;}
+
+
+
+.header td.title img{height:19px;}
+
+
+
+.header td .lang{ right:48px; top:6px; font-size:15px; height:33px; width:33px; line-height:33px; }
+
+
+
+.header td.title h2{font-size:18px;}
+
+
+
+
+
+
+
+.body{top:42px; bottom: 44px;}
+
+
+
+
+
+
+
+.footer td{padding:6px; height: 30px;}
+
+
+
+.footer .btn-edit {	border-radius:2px;	padding:6px 15px;}
+.footer .btn-edit img {	width:15px;	vertical-align:-2px;	margin:0 10px 0 0;}
+.footer .btn-cancel{font-size:15px;	border-radius:2px;	padding:6px 15px;	margin-right:5px;}
+.footer .btn-cancel img {	width:15px;	vertical-align:-2px;	margin:0 10px 0 0;}
+
+
+.footer .btn-pickltr{ font-size:16px; border-radius:1px; padding:8px 18px;}
+
+
+
+.footer .btn-pickltr img{width:33px; vertical-align:-10px; margin:0 0 0 10px;}
+
+
+
+.footer td img{width:26px; margin:2px 0;}
+
+
+
+.footer .btn-end-request{font-size:24px; border-radius:3px; padding:4px 16px;}
+
+
+
+.footer .btn-end-request img{width:30px; vertical-align:-6px; margin:0 4px 0 0;}
+
+
+
+
+
+
+.classes .class-thumb{  height:140px; }
+.classes .class-thumb .class{ padding:2px; margin-bottom:1px;}
+.classes .class-thumb .no{ border-radius:50px;  font-size:15px; font-weight: bold;}
+.classes .class-thumb .month {padding:3px; font-size:16px; margin-top: 5px}
+
+
+
+
+.attendance .row .l{line-height:18px; padding: 2%;  background-size:9px;}
+.attendance .row .chk{padding: 4% 1%;}
+
+
+.login .logo img{width:80px;}
+.login .logo img.app-logo {width:55px;}
+.login .container{padding:15px;}
+.login .container .flds .row{ padding:10px;}
+.login .btn-login{ padding:5px 0; width:50%;   margin-top:8px; font-size:18px;}
+.login .forget-pass{padding:7px; margin-left: 4px; }
+
+
+
+.fc-header-title h2{font-size:18px;}
+
+.callender{padding:10px;}
+
+.fc-border-separate tbody tr.fc-first td, .fc-border-separate td {height: 50px;}
+    .fc-grid .fc-state-highlight .fc-day-number {height:50px;line-height: 50px;}
+
+
+
+
+/*--------------------------------ON/OFF slider-------------------------------------------*/
+
+.onoffswitch {    position: relative; width: 56px;    }
+.onoffswitch-checkbox {    display: none;    }
+.onoffswitch-label {    display: block; overflow: hidden; cursor: pointer; position:relative;    border-top-left-radius: 31px; border-top-right-radius: 31px; border-bottom-left-radius: 31px; border-bottom-right-radius: 31px; width:56px;  height:30px;  }
+.onoffswitch-inner {   width: 56px; position:absolute; height:30px;  left:-60px; top:0;    -moz-transition:  0.5s; -webkit-transition:  0.5s;    -o-transition:  0.5s; transition: 0.5s;    }
+.onoffswitch-label .bar{background:#fff; width:26px; height:26px; position:absolute; right:-32px; top:2px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; -moz-transition:  0.5s; -webkit-transition:  0.5s;    -o-transition:  0.5s; transition: 0.5s;}
+
+.login .remember{padding:6px; line-height:30px; margin-top:4px;}
+.user .info .row label{width:90px;}
+
+
+.header .btn-edit {font-size:16px;	border-radius:2px;	padding:7px 12px;	right:16%; top:16%; line-height:1;}
+.header .btn-edit img {	width:15px;	vertical-align:-1px;	margin:0 10px 0 0;}
+.header .btn-cancel{font-size:16px;	border-radius:2px;	padding:7px 12px;	right:8%; top:16%; line-height:13px;}
+.header .btn-cancel img {width:15px;	vertical-align:-1px;	margin:0 10px 0 0;}
+
+
+
+.attendance .heading .no .img{}
+.attendance .heading .no .img img{width:15px;}
+
+
+/*User Profile*/
+.alluser-profile{ top:45px; bottom:47px; }
+.alluser-profile .profile-info{ text-align:center; }
+.alluser-profile .profile-info .photo{width:110px; height:110px; }
+
+
+.header .ico-user{ right:11%; top:9px;}
+
+/*Inbox*/
+.inbox .row-mail{ padding:6px; margin-bottom:3px;}
+.inbox .row-mail .photo{ width:40px; height:40px; font-size:23px; line-height:40px;}
+.inbox .row-mail .info{ width:80%; }
+.inbox .row-mail .info .date{ font-size:14px;}
+
+.compose .fld{margin-bottom:2px; padding:5px 10px;}
+.compose .fld textarea{  border-radius:3px;  height:250px;}
+.body.footer-space{
+    bottom: 40px;
+}
+.compose .fld label{
+    width: 105px;
+}
+
+
+/*user popup*/
+/*.right-menu{ border:1px solid green;}*/
+.right-menu .user-name-bg{padding:15px; font-size:28px;}
+.right-menu .user-logo img{width:90px;}
+.right-menu .links a{ padding:10px; font-size:20px;}
+.right-menu .links a:hover{background:#fda61b; color:#fff;}
+.right-menu .links a img{width:32px; vertical-align:-12px; margin:0 10px 0 30px;}
+.sign-out{ padding: 10px;  font-size: 18px;}
+.sign-out img{width:28px; vertical-align:-6px; margin:0 8px;}
+
+.add-slider{
+    margin-top: 0px;
+}
+
+
+
+    .body.callender .custom-bar{height: 43px; ; margin: 1px -10px;}
+
+}

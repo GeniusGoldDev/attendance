@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+
+
+/* CSS Document */
+
+
+
+
+
+
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+
+
+body{font-size:16px;}
+
+
+
+
+
+.header{min-height: 53px;}
+
+.header td{padding:12px;}
+
+
+
+.header td:first-child{width:16%;}
+
+
+
+.header td:last-child{width:16%;}
+
+
+.header td.settings img{width:22px;}
+.header td.filter img{width:40px;}
+
+
+.header td.taxi img{width:40px;}
+
+
+
+.header td.title img{height:22px;}
+
+
+
+.header td .lang{ right:62px; top:8px; font-size:16px; height:40px; width:40px; line-height:40px; }
+
+
+
+.header td.title h2{font-size:20px;}
+
+
+
+
+
+
+
+.body{top:53px; bottom:52px;}
+
+
+
+
+
+
+
+
+
+
+.footer td{padding:8px;  height: 35px;}
+
+
+
+.footer .btn-edit {	border-radius:2px;	padding:7px 15px;	}
+.footer .btn-edit img {	width:18px;	vertical-align:-2px;	margin:0 10px 0 0;}
+
+.footer .btn-cancel{font-size:18px;	border-radius:2px;	padding:7px 15px;	margin-right:10px;}
+.footer .btn-cancel img {width:18px;	vertical-align:-2px;	margin:0 10px 0 0;}
+
+.footer .btn-pickltr{ font-size:20px; border-radius:1px; padding:8px 18px;}
+
+
+
+.footer .btn-pickltr img{width:40px; vertical-align:-12px; margin:0 0 0 10px;}
+
+
+
+.footer td img{width:28px; margin:2px 0;}
+
+
+
+.footer .btn-end-request{font-size:28px; border-radius:3px; padding:5px 18px;}
+
+
+
+.footer .btn-end-request img{width:34px; vertical-align:-6px; margin:0 4px 0 0;}
+
+
+
+
+
+
+.classes .class-thumb{  height:150px; }
+.classes .class-thumb .class{ padding:5px; margin-bottom:3px;}
+.classes .class-thumb .no{ border-radius:50px;  font-size:25px; }
+.classes .class-thumb .month {padding:6px; font-size:18px;}
+
+
+
+
+
+.login .logo img{width:110px;}
+.login .logo img.app-logo {width:75px;}
+.login .container{padding:20px;}
+.login .container .flds .row{ padding:10px;}
+.login .btn-login{ padding:10px 0; width:100%;   margin-top:15px; font-size:24px;}
+.login .forget-pass{padding:18px;}
+
+.callender{padding:12px;}
+.fc-border-separate tbody tr.fc-first td, .fc-border-separate td { height: 70px;}
+.fc-grid .fc-state-highlight .fc-day-number {height:70px; line-height: 70px;}
+
+
+.header .btn-edit {font-size:18px;	border-radius:2px;	padding:6px 12px;	right:17%; top:16%;}
+.header .btn-edit img {	width:17px;	vertical-align:-1px;	margin:0 10px 0 0;}
+.header .btn-cancel{font-size:18px;	border-radius:2px;	padding:8px 17px;	right:8%; top:16%;}
+.header .btn-cancel img {width:17px;	vertical-align:-1px;	margin:0 10px 0 0;}
+
+
+
+/*.attendance .heading .no .img{ left:4%;}*/
+.attendance .heading .no .img img{width:20px;}
+
+/*User Profile*/
+.alluser-profile{ top:56px; bottom:54px; }
+.alluser-profile .profile-info{ padding:12px; }
+.alluser-profile .profile-info .photo{width:110px; height:110px; border:solid 6px #f7f7f7;  margin-right:18px;}
+
+
+.header .ico-user{ right:11%; top:14px;}
+
+/*Inbox*/
+.inbox .row-mail{ padding:8px; margin-bottom:3px;}
+.inbox .row-mail .photo{ width:42px; height:42px; font-size:26px; line-height:42px;}
+.inbox .row-mail .info{ width:80%; }
+.inbox .row-mail .info .date{ font-size:14px;}
+.body.footer-space{
+    bottom: 47px;
+}
+.compose .fld label{
+    width: 155px;
+}
+
+/*user popup*/
+/*.right-menu{ border:1px solid blue;}*/
+.right-menu .user-name-bg{padding:20px; font-size:32px;}
+.right-menu .user-logo img{width:100px;}
+.right-menu .links a{ padding:12px; font-size:20px;}
+.right-menu .links a:hover{background:#fda61b; color:#fff;}
+.right-menu .links a img{width:32px; vertical-align:-12px; margin:0 10px 0 30px;}
+.sign-out{ padding:13px;font-size:20px;}
+.sign-out img{width:28px; vertical-align:-6px; margin:0 8px;}
+
+
+.body.callender .custom-bar{height: 53px; ; margin: 1px -12px;}
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">  
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+		<title>Ionic Project</title>
+
+		<!-- Bootstrap -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/css/style.css" rel="stylesheet" />
+		
+	</head>
+    <body>
+
+    	<!-- Navigation Starts Here -->	
+  		<nav class="" id="nav">
+			<div class="row top">
+				<h1>اتصل بنا</h1>
+				<a href="#/login" class="icon-back icon"><img src="assets/img/arrow.png" alt="Back"></a>
+				<!-- <a href="#/about" class="icon-back icon"><img src="images/arrow-back2.png" alt="Back"></a> -->
+				<a href="#/newplan" class="icon-user icon"><img src="assets/img/user.png" alt="User"></a>
+			</div>
+			<div class="row navigation">
+				<ul>
+					<li dir="rtl"><a class="active" href="#/contact">اتصل بنا</a></li>
+					<li ><a href="#/about">عن التطبيق</a></li>
+					
+					<li ><a href="#/indexpage">أخبار</a></li>
+					
+				</ul>
+			</div>
+		</nav><!-- Navigation Ends Here -->	
+
+		<!-- Main Container Starts Here -->	
+		<div class="container-fliud" id="contactMain">
+
+			<!-- Contact Form Starts Here -->	
+			<section class="row contact">
+					<!-- action="contact.php" method="POST" -->
+				<form  class="form">
+					<input type="text" style="direction:rtl;" class="form-control" maxlength="5" name="name" ng-model="f1" placeholder="Full name الاسم كاملاً">
+					<input type="text"  style="direction:rtl;"  class="form-control" name="name1" ng-model="f2" placeholder="E-Mail البريد الإلكتروني">
+					<span style="color:red" ng-show="emailv">Please Fill Valid Email Id.</span>
+					<input type="text"  style="direction:rtl;"  class="form-control" name="name2" ng-model="f3" placeholder="Title عنوان الرسالة">
+					<textarea name="message" id=""  style="direction:rtl;"  cols="30" rows="10" class="form-control" ng-model="f4" placeholder="Message نص الرسالة"></textarea>
+					<span style="color:red" ng-show="msgv">Please Fill Message.</span>
+					<div class="col-md-12 col-sm-12 col-xs-12 left">
+						<button ng-click="sendcontact()"><img src="assets/img/send.png" alt=""></button>		
+					</div>
+						
+				</form>
+			</section><!-- Contact Form Ends Here -->
+
+			
+			
+		</div><!-- Main Container Ends Here -->
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery-migrate.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+	</body>
+		
+		
+</html>

@@ -1,0 +1,99 @@
+<div class="">
+        <div class="header">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    
+                <td class="settings" ng-hide="user_parent"   ng-click="#/newplan" ng-class="{'title' : edit}">
+                    <!-- <img ng-show="!edit" src="images/icon-settings2.png"  alt="" />
+                    <h2 ng-show="edit" >{{editButtontext}}</h2> -->
+                   <!-- <a href='#/newplan'> <img src="assets/img/arrow.png" alt="Back" /></a> -->
+                   <a href="#/newplan" class="icon-back icon"><img src="images/arrow-back2.png" alt="Back"></a>
+                </td>
+    
+    
+                    <td  class="title" align="center"><h2>School Detail</h2></td>
+                    <td align="right" class="settings" ng-hide="user_parent">
+                        <!-- <a ng-click="showNav()" > <img  src="images/icon-menu.png"  alt="" /></a> -->
+                    </td>
+    
+                </tr>
+            </table>
+        </div>
+        <div class="body alluser-profile">
+           <div class="profile-info">
+                <div class="photo">
+                    <!--<img ng-src="{{user.pic}}" alt="">-->
+                </div>
+            </div>
+            <div class="form">
+                <div class="row-pl">
+                    <!--<div class="right"> : {{lang.name_field}}</div>-->
+                    <div class="left">
+                      <!--  <span ng-hide="edit">{{user.first_name}}</span>-->
+                        <div class="fld" >
+                            <input  type="text" maxlength="35" ng-model="schoolname" placeholder="*School Name" ng-change="chkschooldetail()">
+                        </div>
+                        <span style="color:Red" ng-show="validschoolname">Please Enter School Name</span>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                
+                <div class="row-pl">
+                    <!--<div class="right"> : {{lang.user_id}}</div>-->
+                    <div class="left">
+                     <!--   <span ng-hide="edit" >{{user.username}}</span>-->
+                        <div class="fld" >
+                            <input type="text" maxlength="35" ng-model="address" placeholder="*School Address"  ng-change="chkschooldetail()">
+                        </div>
+                        <span style="color:Red" ng-show="validschooladdress">Please Enter School Address</span>
+                    </div>
+                    <div class="clr"></div>
+                </div> <div class="row-pl">
+                   <!-- <div class="right"> : {{lang.email_id}} </div>-->
+                    <div class="left">
+                        <!--<span ng-hide="edit" >{{user.email_id}}</span>-->
+                        <div class="fld email" >
+                        <input type="text" maxlength="60" ng-model="emailid" placeholder="*Email Id" value="" ng-change="chkemail(emailid)">
+                           
+                        </div>
+                        
+                        <span style="color:Red" ng-show="validemail">Please Enter Valid Email</span>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="row-pl">
+                   <!-- <div class="right"> : {{lang.phone_no}}</div>-->
+                    <div class="left">
+                        <!--<span ng-hide="edit" >{{user.phone_no}}</span>-->
+                        <div class="fld phno" >
+                            <input type="tel" maxlength="20" ng-model="contact" placeholder="Contact No." value="">
+                        </div>
+                    </div>
+                    <div class="clr"></div>
+                </div> 
+                <div class="row-pl">
+                    <!--<div class="right"> : {{lang.old_pass}}</div>-->
+                    <div class="left">
+                        <div class="fld pass" >
+                            <input  type="password" maxlength="20" ng-model="password" placeholder="*Password" value=""  ng-change="chkschooldetail()"></div>
+                    </div>
+                    <span style="color:Red" ng-show="validpassword">Please Enter Password</span>
+                    <div class="clr"></div>
+                </div> 
+                <div class="row-pl" >
+                    <!--<div class="right"> : {{lang.new_pass}}</div>-->
+                    <div class="left">
+                        <div class="fld retype-pass" >
+                            <input type="password" maxlength="20" ng-model="confirmpassword" placeholder="*Confirm Password"  ng-change="chkschooldetail()"></div>
+                    </div>
+                    <span style="color:Red" ng-show="validconfirmpassword">Please Enter Confirm Password</span>
+                    <span style="color:Red" ng-show="validsamepassword">Password and Confirm Password Must Be Same</span>
+                    <div class="clr"></div>
+                </div> 
+                <button class="btn-login" ng-click="paynow()">Pay and Register</button>
+                
+                
+                
+            </div>
+        </div>
+    
+    </div>

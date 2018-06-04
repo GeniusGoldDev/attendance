@@ -1,0 +1,62 @@
+<div ng-controller="childrenList">
+    <div class="header" ng-show="!user_parent"> 
+        <a class="btn-edit" ng-show="admin" ng-class="{'btn-cancel':edit}" ng-click="editMode()" >
+            <img ng-show="!edit" src="images/ico-edit.png" alt="">{{editText}}
+        </a>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td  class="title"><h2>{{lang.children}}</h2> 
+                    <a href="#/user" class="ico-user"><img src="images/ico-user.png"  alt="" /></a>
+                </td>
+                <td align="right" class="settings">
+                    <img ng-logout="" src="images/ico-logout.png"  alt="" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="ParentHeader" ng-show="user_parent">
+	<a class="btn settings" href="#/user"> settings</a>
+    <div class="title">{{lang.Student_Info}}</div>
+		<a class="btn mailList" href="#/mailList"> settings</a>
+
+    </div>
+    <div class="body attendance children" ng-hide="user_parent">
+        <div class="row" ng-repeat="student in students">
+            <div class="l" ng-click="viewStudent(student.sid)"> {{student.name}}               </div>
+            <div class="clr"></div>
+        </div>
+        <div class="row" ng-show="students.length == 0"><p style="text-align: center;padding: 10px 0;">{{lang.no_children}}</p></div>
+    </div>
+
+
+        <div class="body attendance children" ng-class="{ 'parent_body': user_parent}" ng-show="user_parent">
+        <div class="row rowheader">
+        <div class="col1" style="width:40%">
+        {{lang.Total_absent}}
+        </div>
+        <div class="col2" style="width:60%">
+        
+        {{lang.Std_Name}}
+        </div>
+        </div>
+        <div class="row" ng-repeat="student in students">
+
+
+            <div class="l" style="color:#007cca; padding-top:15px;" ng-click="viewStudent(student.sid)">{{student.name}}    <div class="attendance">{{student.attendance}} </div>            </div>
+            <div class="clr"></div>
+        </div>
+        <div class="row" ng-show="students.length == 0"><p style="text-align: center;padding: 10px 0;">{{lang.no_children}}</p></div>
+    </div>
+<!--    <div class="footer"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center" ></td>
+                <td align="center">
+                   
+                </td>
+                <td align="center" ></td>
+            </tr>
+        </table>
+    </div>-->
+		<div class="sign-out parent-signout" ng-click="logout()" ng-show="user_parent">{{lang.sign_out}} </div>
+</div>
+

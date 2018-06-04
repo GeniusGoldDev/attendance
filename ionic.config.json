@@ -1,0 +1,9 @@
+{
+  "name": "PC Center",
+  "app_id": "258d1419",
+  "type": "ionic1",
+  "watchPatterns": [],
+  "integrations": {
+    "cordova": {}
+  }
+}

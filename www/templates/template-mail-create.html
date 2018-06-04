@@ -1,0 +1,51 @@
+<div class="header">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+         <td class="settings"><a ng-back="" ><img src="images/arrow-back2.png"  alt="" /></a></td>
+            <td class="title" align="center">
+                <h2>{{lang.mail_list}}</h2></td>
+            <!--<td align="right" class="settings">
+                <img ng-click="closeMail()" src="images/ico-cross2.png" alt="">
+            </td>-->
+            <td align="right" class="settings">
+                    
+                   <a ng-click="showNav()"> <img  src="images/icon-menu.png"  alt="" /></a>
+                </td>
+        </tr>
+    </table>
+</div>
+<div class="body compose">
+    <form ng-submit="sendMessage()" novalidate="">
+        <div class="fld send_to"><!--{{lang.send_to}}--></div>
+        <div class="fld" ng-show="admin">
+            <label>{{lang.parents}}<input type="checkbox" value="true" name="send_to" ng-model="mail.send_to.parents"></label>
+            <label>{{lang.modarator}}<input type="checkbox" value="true" name="send_to" ng-model="mail.send_to.mod"></label>
+            <label>{{lang.teacher}}<input type="checkbox" value="true" name="send_to" ng-model="mail.send_to.tech"></label>
+        </div>
+        <div class="fld" ng-show="admin">
+            
+            <label>{{lang.spec_user}}<input type="checkbox" value="true" name="send_to" ng-model="mail.send_to.oneuser"></label>
+            <label>{{lang.admin}}<input type="checkbox" value="true" name="send_to" ng-model="mail.send_to.admin"></label>
+        </div>
+        <div class="fld" ng-show="mail.send_to.oneuser || moda">
+            <input type="text" placeholder="{{lang.emai_user_id}}" ng-model="mail.one_user_email" />
+            <input type="email" hidden  ng-model="x" />
+        </div>
+        <div class="fld">
+            <input type="text" placeholder="{{lang.enter_subject}}" ng-model="mail.title" />
+        </div>
+        <div class="fld">
+            <textarea placeholder="{{lang.note_text}}" ng-model="mail.notification"></textarea>
+        </div>
+
+        <div class="btn-mail-submit">
+            <input type="submit" name="button" id="button" value="{{lang.submit}}">
+        </div>
+    </form>
+</div>
+
+
+
+
+
+

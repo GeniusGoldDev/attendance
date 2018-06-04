@@ -1,0 +1,124 @@
+/*
+:::Theme Colors:::
+
+	#40c4ff : Blue-ish
+	#fda61c : Orange-ish
+	#ffffff : White
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f6f9;
+}
+.price-wrapper ul {
+    margin: 0px;
+    padding: 0px 20px;
+    text-align: center;
+}
+.price-block {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 55px -20px #757171;
+    -webkit-transition: all.2s linear;
+    -o-transition: all.2s linear;
+    transition: all.2s linear;
+    -webkit-backface-visibility: hidden;
+}
+.price-block:hover {
+    -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-transform: scale(1.03) translateZ(0);
+    -webkit-transform: scale(1.03) translateZ(0);
+    transform: scale(1.03) translateZ(0);
+    box-shadow: 0px 0px 15px #e4e0e0;
+}
+.price-block .price-header {
+    position: relative;
+    height: auto;
+    padding: 7px 0px;
+    background: #40c4ff;
+    width: 100%;
+}
+.price-block .price-header p {
+    font-weight: 600;
+    margin: 0px;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: .5px;
+}
+.price-block .price-box {
+    height: 160px;
+    overflow: hidden;
+    padding: 0px;
+    width: 100%;
+    position: relative;
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.price-block .price-box .content {
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+    text-align: center;
+    z-index: 10;
+}
+.price-box .content .price {
+    font-size: 65px;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 0px;
+    color: #fff;
+    margin: 0px;
+}
+.price-box .content .plan {
+    font-weight: 700;
+    margin: 0px;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+.price-box .content .price span {
+    font-size: 20px;
+    margin-left: 0px;
+    font-weight: 700;
+    position: relative;
+    top: -5px;
+}
+.price-block .price-box .mask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(253, 166, 28, .9);
+    z-index: 3;
+}
+.purchase-button {
+    width: 100%;
+    background: transparent;
+    padding: 0px;
+    position: relative;
+    z-index: 15;
+    height: 0px;
+}
+.purchase-button button {
+    position: relative;
+    top: -19px;
+    padding: 6px 25px;
+    background-color: #40C4FF;
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    box-shadow: 0px 0px 7px #a5a5a5;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 15px;
+}

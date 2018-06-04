@@ -1,0 +1,21 @@
+<div>
+    <div class="header">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="settings">
+                    <a ng-back=""><img src="images/arrow-back2.png" alt="" /></a>
+                </td>
+                <td class="title" align="center">
+                    <h2>{{lang.calender}}</h2></td>
+                <td align="right" class="settings">
+                    <a ng-click="showNav()"> <img src="images/icon-menu.png" alt="" /></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="body callender">
+        <div ui-calendar="uiConfig.calendar"></div>
+        <div class="custom-bar"></div>
+
+    </div>
+</div>

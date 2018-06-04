@@ -1,0 +1,102 @@
+<div class="">
+    <div class="header">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+            <td class="settings" ng-hide="user_parent"   ng-click="enbEdit()" ng-class="{'title' : edit}">
+                <img ng-show="!edit" src="images/icon-settings2.png"  alt="" />
+                <h2 ng-show="edit" >{{editButtontext}}</h2>
+            </td>
+
+
+
+            <td class="settings" ng-show="user_parent" style="width:16%">
+                <a ng-back=""  style="margin-right:20px;"><img src="images/arrow-back2.png" alt="" /></a>
+            </td>
+
+
+
+                <td  class="title" align="center"><h2>{{lang.details}}</h2></td>
+                <td align="right" class="settings" ng-hide="user_parent">
+                    <a ng-click="showNav()" > <img  src="images/icon-menu.png"  alt="" /></a>
+                </td>
+
+
+            <td class="settings" style="text-align: right" ng-show="user_parent"   ng-click="enbEdit()" ng-class="{'title' : edit}">
+                <img ng-show="!edit" src="images/icon-settings2.png"  alt="" />
+                <h2 ng-show="edit" >{{editButtontext}}</h2>
+            </td>
+
+
+            </tr>
+        </table>
+    </div>
+    <div class="body alluser-profile">
+       <div class="profile-info">
+            <div class="photo">
+                <!--<img ng-src="{{user.pic}}" alt="">-->
+            </div>
+        </div>
+        <div class="form">
+            <div class="row-pl">
+                <!--<div class="right"> : {{lang.name_field}}</div>-->
+                <div class="left">
+                  <!--  <span ng-hide="edit">{{user.first_name}}</span>-->
+                    <div class="fld" ng-class="{'disabled': 'false'}">
+                        <input  type="text" ng-disabled="true" value="{{user.first_name}}" ng-model="user.first_name" placeholder="{{lang.enter_name}}">
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div>
+            
+            <div class="row-pl">
+                <!--<div class="right"> : {{lang.user_id}}</div>-->
+                <div class="left">
+                 <!--   <span ng-hide="edit" >{{user.username}}</span>-->
+                    <div class="fld" ng-class="{'disabled': 'false'}">
+                        <input type="text" ng-disabled="true" value="{{user.username}}" ng-model="user.username" placeholder="{{lang.enter_user_id}}">
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div> <div class="row-pl">
+               <!-- <div class="right"> : {{lang.email_id}} </div>-->
+                <div class="left">
+                    <!--<span ng-hide="edit" >{{user.email_id}}</span>-->
+                    <div class="fld email" ng-class="{'disabled': !edit}">
+                        <input type="text" ng-disabled="!edit" value="{{user.email_id}}" ng-model="user.email_id" placeholder="{{lang.enter_email_id}} ">
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div class="row-pl">
+               <!-- <div class="right"> : {{lang.phone_no}}</div>-->
+                <div class="left">
+                    <!--<span ng-hide="edit" >{{user.phone_no}}</span>-->
+                    <div class="fld phno" ng-class="{'disabled': !edit}">
+                        <input type="tel" ng-disabled="!edit" value="{{user.phone_no}}" ng-model="user.phone_no" placeholder="{{lang.enter_phone_no}}">
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div> 
+            <div class="row-pl">
+                <!--<div class="right"> : {{lang.old_pass}}</div>-->
+                <div class="left">
+                    <div class="fld pass" ng-class="{'disabled': !edit}">
+                        <input  type="password" ng-disabled="!edit" value="{{user.oldpass}}" ng-model="user.oldpass" placeholder="{{lang.enter_old_pass}}"></div>
+                </div>
+                <div class="clr"></div>
+            </div> 
+            <div class="row-pl" >
+                <!--<div class="right"> : {{lang.new_pass}}</div>-->
+                <div class="left">
+                    <div class="fld retype-pass" ng-class="{'disabled': !edit}">
+                        <input type="password" ng-disabled="!edit" value="{{user.newpass}}" ng-model="user.newpass" placeholder="{{lang.enter_new_pass}}"></div>
+                </div>
+                <div class="clr"></div>
+            </div> 
+            
+            
+            
+        </div>
+    </div>
+
+</div>

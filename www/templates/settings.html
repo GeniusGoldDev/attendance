@@ -1,0 +1,16 @@
+<div class="popup-overlay" ng-click="hideOptions()">
+	<div class="right-menu">
+		<div class="user-name-bg">
+			<div class="user-logo"><img src="{{schlogo}}"  alt=""></div>
+			<a  class="ico-user">{{user_name}}</a>
+		</div>
+		<div class="links">
+			<a href="#/classes" >{{lang.class_list}}<img src="images/ico-classic-list.png"  alt=""></a>
+
+			<a ng-show="isadmin || ismod" href="#/delaylist" >قائمة التأخير <img src="images/ico-classic-list.png"  alt=""></a>
+			<a href="#/mailList">{{lang.messages}}<img src="images/ico-message.png"  alt=""></a>
+			<a href="#/user">{{lang.edit_info}}<img src="images/ico-editinfo.png" alt=""></a>
+		</div>
+		<div class="sign-out" ng-click="logout()">{{lang.sign_out}}<img src="images/ico-signout.png"  alt=""></div>
+	</div>
+</div>
